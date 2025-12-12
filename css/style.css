@@ -149,7 +149,6 @@
   height: 3rem;
 }
 
-
 @media (max-width: 768px) {
   #header-carousel .carousel-item {
     position: relative;
@@ -545,90 +544,449 @@
 
 /* Floating animation */
 .floating-img {
-    animation: floating 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-30px); }  /* 上移一点 */
-    100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  } /* 上移一点 */
+  100% {
+    transform: translateY(0px);
+  }
 }
-
-
-
-
 
 /* Timeline line behind steps */
 .process-steps {
-    position: relative;
-    margin-top: 1rem;
+  position: relative;
+  margin-top: 1rem;
 }
 
 .process-steps::before {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 8%;
-    right: 8%;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(212,175,55,0), #d4af37, rgba(212,175,55,0));
-    opacity: 0.5;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0),
+    #d4af37,
+    rgba(212, 175, 55, 0)
+  );
+  opacity: 0.5;
+  z-index: 0;
 }
 
 /* Step card */
 .process-step {
-    position: relative;
-    z-index: 1;
-    transition: 0.3s ease;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease;
 }
 
 .process-step:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(212,175,55,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
 }
 
 /* Icon + number circle */
 .step-icon-wrap {
-    position: relative;
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    border: 2px solid #d4af37;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #111;
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 2px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
 }
 
 .step-icon {
-    color: #d4af37;
-    font-size: 1.4rem;
+  color: #d4af37;
+  font-size: 1.4rem;
 }
 
 .step-number {
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    background: #d4af37;
-    color: #000;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 999px;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: #d4af37;
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
 }
 
 /* Mobile: hide line to avoid weird look */
 @media (max-width: 767.98px) {
-    .process-steps::before {
-        display: none;
-    }
+  .process-steps::before {
+    display: none;
+  }
 }
 
 /* 只在手机 / 平板以下时，给展开的菜单加背景 */
 @media (max-width: 991.98px) {
-    #navbarCollapse {
-        background: #0d0d0d ; 
-       
-    }
+  #navbarCollapse {
+    background: #0d0d0d;
+  }
+}
+
+/* =========================
+   BRIF Partner Hero
+========================= */
+.brif-partner-hero {
+  padding: 110px 0 80px;
+  background: radial-gradient(
+      900px 500px at 50% -10%,
+      rgba(212, 175, 55, 0.12),
+      rgba(0, 0, 0, 0) 60%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
+  color: #fff;
+}
+
+.brif-partner-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brif-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.32em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.brif-hero-title {
+  margin: 0 0 22px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brif-hero-desc {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .brif-partner-hero {
+    padding: 90px 0 70px;
+  }
+  .brif-hero-title {
+    letter-spacing: 0.02em;
+  }
+}
+
+/* =========================
+   BRIF Partner Section
+========================= */
+.brif-partner {
+  background: radial-gradient(
+      1200px 600px at 50% 0%,
+      rgba(212, 175, 55, 0.1),
+      rgba(0, 0, 0, 0) 55%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65));
+  color: #fff;
+}
+
+/* Title */
+.brif-title {
+  margin-bottom: 34px;
+}
+.brif-title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+.brif-title-line::before,
+.brif-title-line::after {
+  content: "";
+  width: 110px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+.brif-title-mini {
+  letter-spacing: 0.22em;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.brif-title-main {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.brif-title-underline {
+  width: 260px;
+  height: 1px;
+  margin: 12px auto 14px;
+  background: rgba(255, 255, 255, 0.28);
+}
+.brif-title-sub {
+  margin: 0 auto;
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+}
+
+/* Card */
+.brif-partner-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+
+  transition: 0.25s ease;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.brif-partner-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    600px 200px at 50% 0%,
+    rgba(212, 175, 55, 0.18),
+    rgba(0, 0, 0, 0) 60%
+  );
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.brif-partner-card img {
+  position: relative;
+  z-index: 1;
+  max-height: 75px;
+  max-width: 88%;
+  object-fit: contain;
+
+  opacity: 0.95;
+  transition: 0.25s ease;
+}
+
+.brif-partner-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.85);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.55);
+}
+
+.brif-partner-card:hover::before {
+  opacity: 1;
+}
+
+.brif-partner-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive tweak */
+@media (max-width: 576px) {
+  .brif-partner-card {
+    height: 105px;
+    border-radius: 14px;
+  }
+  .brif-partner-card img {
+    max-height: 56px;
+  }
+}
+
+/* Auto swipe */
+.partner-marquee {
+  overflow: hidden;
+  margin-top: 26px;
+}
+
+.partner-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+}
+
+/* 卡片 */
+.partner-item {
+  min-width: 180px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.partner-item img {
+  max-height: 60px;
+  max-width: 85%;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.track-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.track-right {
+  animation: scroll-right 60s linear infinite;
+}
+
+/* Hover pause（高级） */
+.partner-marquee:hover .partner-track {
+  animation-play-state: paused;
+}
+
+/* Mobile: 更慢 */
+@media (max-width: 768px) {
+  .track-left,
+  .track-right {
+    animation-duration: 90s;
+  }
+}
+
+/* =========================
+   BRIF Partner Benefits
+========================= */
+.brif-partner-benefits {
+  padding: 90px 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9));
+  color: #fff;
+}
+
+.brif-benefit-card {
+  height: 100%;
+  padding: 28px 26px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  transition: 0.25s ease;
+}
+
+.brif-benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.6);
+}
+
+.brif-benefit-icon {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: rgba(212, 175, 55, 0.85);
+  margin-bottom: 14px;
+}
+
+.brif-benefit-card h6 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.brif-benefit-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .brif-partner-benefits {
+    padding: 70px 0;
+  }
+}
+
+/* =========================
+   BRIF Partner CTA
+========================= */
+.brif-partner-cta {
+  padding: 90px 0;
+  background: radial-gradient(
+      700px 360px at 50% 0%,
+      rgba(212, 175, 55, 0.12),
+      rgba(0, 0, 0, 0) 60%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+  color: #fff;
+}
+
+.brif-cta-desc {
+  max-width: 720px;
+  margin: 0 auto 34px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Gold button */
+.brif-btn-gold {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #111;
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  border: none;
+
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.brif-btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.45);
+  color: #111;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brif-partner-cta {
+    padding: 70px 0;
+  }
 }
