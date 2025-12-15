@@ -76,6 +76,8 @@ async function loadPartials() {
   if (footerEl) footerEl.innerHTML = footer;
 
   setActiveNav();
+  initCapabilityScrollSpy();
+
 }
 document.addEventListener("DOMContentLoaded", loadPartials);
 
@@ -121,4 +123,57 @@ function setActiveNav() {
     );
     if (servicesToggle) servicesToggle.classList.add("active");
   }
+}
+
+// our capabilities section 2
+function initCapabilityScrollSpy() {
+  const links = Array.from(
+    document.querySelectorAll(".pillar-link[href^='#cap-']")
+  );
+  const sections = links
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
+
+  if (!links.length || !sections.length) return; // 不是这个页面就不跑
+
+  // 点击左侧：平滑滚动
+  links.forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute("href"));
+      if (!target) return;
+
+      // 预留 navbar 高度（你 navbar 固定的话更需要）
+      const offset = 110;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
+
+  // 滚动：自动高亮
+  const setActive = (id) => {
+    links.forEach((a) =>
+      a.classList.toggle("active", a.getAttribute("href") === `#${id}`)
+    );
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      // 找到当前最“可见”的那个
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible) setActive(visible.target.id);
+    },
+    {
+      root: null,
+      // 让它更像“读到标题就切换”
+      rootMargin: "-25% 0px -60% 0px",
+      threshold: [0.1, 0.2, 0.4, 0.6],
+    }
+  );
+
+  sections.forEach((sec) => observer.observe(sec));
 }
