@@ -77,14 +77,16 @@ async function loadPartials() {
 
   setActiveNav();
   initCapabilityScrollSpy();
-
 }
 document.addEventListener("DOMContentLoaded", loadPartials);
 
 //Active navbar
 function setActiveNav() {
   const path = location.pathname.toLowerCase();
-  const currentPage = path.split("/").pop();
+  let currentPage = path.split("/").pop();
+
+  // ✅ root domain / 处理：brif.cloud/ -> index.html
+  if (!currentPage) currentPage = "index.html";
 
   // 1️⃣ 清掉所有 active（避免残留）
   document.querySelectorAll(".navbar .active").forEach((el) => {
