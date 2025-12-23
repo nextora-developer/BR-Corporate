@@ -122,7 +122,7 @@
         /* CARDS */
         .card {
             border: 0.2px solid #d4af37;
-            background-color: rgba(255,255,255,0.05);
+            background-color: rgba(255, 255, 255, 0.05);
             color: #f5f5f5;
         }
 
@@ -207,6 +207,133 @@
             background: var(--brif-gold);
             color: #000 !important;
         }
+
+        /* Bundle Comparison */
+        .section-bundle {
+            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.18), transparent 55%), #050509;
+        }
+
+        .bundle-compare-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
+        }
+
+        .bundle-compare-header {
+            background: linear-gradient(180deg, #0A0A0C, #000);
+            color: #ffffff;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .bundle-row {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .bundle-check {
+            color: #D4AF37;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .bundle-x {
+            color: #ef4444;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        /* Journey Steps */
+        .journey-steps {
+            position: relative;
+        }
+
+        .journey-step {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        /* Highlighted steps */
+        .journey-step.active {
+            background: rgba(212, 175, 55, 0.18);
+            border-color: rgba(212, 175, 55, 0.9);
+            color: var(--brif-gold);
+            box-shadow:
+                0 0 0 1px rgba(212, 175, 55, 0.35) inset,
+                0 18px 45px rgba(0, 0, 0, 0.55);
+        }
+
+        .step-desc {
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FAQ Accordion */
+        /* ===== BRIF THEME FAQ ===== */
+
+        .faq-accordion .accordion-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        }
+
+        /* Question button */
+        .faq-accordion .accordion-button {
+            background: transparent;
+            color: #f9fafb;
+            font-weight: 600;
+            padding: 1.2rem 1.4rem;
+            box-shadow: none;
+        }
+
+        /* Remove Bootstrap focus / blue */
+        .faq-accordion .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        /* Active (opened) */
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--brif-gold);
+        }
+
+        /* Arrow icon */
+        .faq-accordion .accordion-button::after {
+            background-image: none;
+            content: "▲";
+            font-size: 0.7rem;
+            color: var(--brif-gold);
+            transform: rotate(180deg);
+        }
+
+        /* Collapsed arrow */
+        .faq-accordion .accordion-button.collapsed::after {
+            transform: rotate(0deg);
+            color: rgba(212, 175, 55, 0.7);
+        }
+
+        /* Answer body */
+        .faq-accordion .accordion-body {
+            background: rgba(0, 0, 0, 0.35);
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.65;
+            padding: 1.2rem 1.4rem 1.4rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
     </style>
 </head>
 
@@ -225,7 +352,7 @@
         <div id="site-navbar"></div>
         <div class="page-header pb-5">
             <div class="container text-center py-5">
-                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">One Stop Business Service</h1>
+                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">One Stop Business Solutions</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb justify-content-center text-uppercase mb-0">
                         <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
@@ -239,32 +366,167 @@
     <!-- Header End -->
 
     <!-- Main Content Start -->
-    <!-- Section 1: Hero / Intro -->
+    <!-- Section: Hero / Intro -->
     <section class="py-5 hero-section">
         <div class="container text-center">
             <span class="tier-badge mb-3 px-3 py-2 d-inline-block">
-                Full Digital Package for Sdn Bhd
+                Start & grow your Sdn Bhd — all in one place
             </span>
             <h2 class="mb-3 fw-bold">
                 Starting a business in Malaysia<br class="d-none d-md-inline">has never been this easy
             </h2>
             <p class="lead text-white-50 mx-auto" style="max-width: 720px;">
-                Integrating company incorporation, secretary services, cloud accounting, and SEO marketing.
-                We handle the backend tasks so you can focus on growth.
+                We bring together company incorporation, licensed company secretarial services, cloud accounting, HR
+                setup, website development, and SEO marketing — all in one integrated solution.
+                <br><br>
+                We handle the paperwork, compliance, and systems.
+                You focus on sales, operations, and growth.
             </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
                 <a href="#wizard" class="btn btn-primary cta-btn mb-2 mb-md-0">
                     Start Smart Assessment
                 </a>
                 <a href="#details" class="btn btn-outline-gold">
-                    View Service Details
+                    View Packages
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Section: Business Journey -->
+    <section class="py-5 section-dark">
+        <div class="container">
 
-    <!-- Section 2: Tabs + Charts + Feature Cards -->
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Your Path to Business Excellence</h2>
+                <p class="text-muted mb-0">
+                    A clear, four-step journey to a fully operational and compliant enterprise.
+                </p>
+            </div>
+
+            <!-- Steps -->
+            <div class="row text-center gy-4 journey-steps">
+
+                <!-- Step 1 -->
+                <div class="col-md-3">
+                    <div class="journey-step active mb-3">1</div>
+                    <h6 class="fw-bold">Legal Setup</h6>
+                    <p class="text-muted small mb-0 step-desc">
+                        SSM name search & official incorporation.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-3">
+                    <div class="journey-step mb-3">2</div>
+                    <h6 class="fw-bold">Compliance</h6>
+                    <p class="text-muted small mb-0 step-desc">
+                        Corporate bank opening & CoSec appointment.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-3">
+                    <div class="journey-step active mb-3">3</div>
+                    <h6 class="fw-bold">Digital Finance</h6>
+                    <p class="text-muted small mb-0 step-desc">
+                        SQL / Bukku implementation & e-Invoicing.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-3">
+                    <div class="journey-step mb-3">4</div>
+                    <h6 class="fw-bold">Growth Launch</h6>
+                    <p class="text-muted small mb-0 step-desc">
+                        Web presence & SEO visibility dominance.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Section: Why Choose the Bundle -->
+    <section class="py-5 section-bundle">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h3 class="fw-bold mb-2">Why choose the Bundle?</h3>
+                <p class="text-muted mb-0">
+                    Traditional firms charge you for every single paper. We don’t.
+                </p>
+            </div>
+
+            <!-- Comparison Card -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="bundle-compare-card rounded-4 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="row g-0 bundle-compare-header">
+                            <div class="col-6 px-4 py-3 fw-semibold text-start">
+                                The Traditional Way
+                            </div>
+                            <div class="col-6 px-4 py-3 fw-semibold text-start">
+                                Our “Business OS” Package
+                            </div>
+                        </div>
+
+                        <!-- Row 1 -->
+                        <div class="row g-0 bundle-row">
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-x">✕</span> Separate Secretarial Firm
+                            </div>
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-check">✓</span> Unified Dedicated Manager
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="row g-0 bundle-row">
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-x">✕</span> External Web Agency (RM3k+)
+                            </div>
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-check">✓</span> Built-in Digital Launch
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="row g-0 bundle-row">
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-x">✕</span> Manual Bookkeeping
+                            </div>
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-check">✓</span> Automated Cloud Accounting
+                            </div>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="row g-0 bundle-row border-0">
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-x">✕</span> Hidden Document Fees
+                            </div>
+                            <div class="col-6 px-4 py-3 text-start">
+                                <span class="bundle-check">✓</span> 100% Transparent Flat Fee
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Section: Tabs + Charts + Feature Cards -->
     <section id="details" class="py-5 section-dark">
         <div class="container">
             <!-- Title -->
@@ -290,6 +552,11 @@
                     <li class="nav-item">
                         <button id="tab-ultimate" class="nav-link" type="button" onclick="updateState('ultimate')">
                             💎 Ultimate Digital Suite
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="tab-custom" class="nav-link" type="button" onclick="updateState('custom')">
+                            👑 Custom
                         </button>
                     </li>
                 </ul>
@@ -407,12 +674,12 @@
     </section>
 
 
-    <!-- Section 3: Wizard -->
+    <!-- Section: Wizard -->
     <section id="wizard" class="py-5 ">
         <div class="container" style="max-width: 720px;">
             <div class="text-center mb-4">
                 <h3 class="fw-bold mb-2">Smart Package Recommender</h3>
-                <p class="text-muted mb-0">Just 3 steps to discover the plan that best fits your business scale.</p>
+                <p class="text-white-50 mb-0">Just 3 steps to discover the plan that best fits your business scale.</p>
             </div>
 
             <div class="wizard-card p-4 p-md-5">
@@ -478,13 +745,16 @@
             <!-- Title -->
             <div class="text-center mb-5">
                 <h3 class="fw-bold mb-3">Sdn Bhd Digitalisation Packages</h3>
+                <p class="text-white-50 mb-0">Designed for founders, SMEs, and established companies at every stage of
+                    growth.</p>
+
             </div>
 
             <!-- Packages -->
             <div class="row g-4 justify-content-center">
 
                 <!-- Starter Launch -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
                     <div class="h-100 p-4 p-md-5 rounded-4 border" style="
                     background: rgba(255,255,255,0.05);
                     border-color: rgba(212,175,55,0.22) !important;
@@ -492,14 +762,14 @@
                     backdrop-filter: blur(10px);
                 ">
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h3 class="text-white mb-0">Starter Launch</h3>
-                            <span class="badge rounded-pill" style="
+                            <h3 class="text-white mb-0">Starter</h3>
+                            <!-- <span class="badge rounded-pill" style="
                             background: rgba(212,175,55,0.12);
                             border: 1px solid rgba(212,175,55,0.28);
                             color: rgba(212,175,55,0.95);
                         ">
                                 Starter
-                            </span>
+                            </span> -->
                         </div>
 
                         <p class="mb-4" style="color: rgba(255,255,255,0.60);">
@@ -508,8 +778,10 @@
 
                         <div class="mb-4">
                             <div class="d-flex align-items-end gap-2">
-                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 3,xxx</div>
                                 <div class="mb-2" style="color: rgba(255,255,255,0.55);">starting</div>
+                            </div>
+                            <div class="d-flex align-items-end gap-2">
+                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 6,xxx</div>
                             </div>
                             <div class="small" style="color: rgba(255,255,255,0.45);">
                                 Includes 12 months secretary & compliance
@@ -527,8 +799,8 @@
                                     Statutory Records</li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> Basic Cloud Accounting Setup &
                                     Training</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Standard HR Templates (Offer &
-                                    Contract)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Employment Documents Pack (Offer
+                                    Letter + Employment Contract)</li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> 1-page Landing Website (Mobile
                                     Responsive)</li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> Basic On-page SEO Setup</li>
@@ -542,7 +814,7 @@
                 </div>
 
                 <!-- Growth Expansion -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.25s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.25s">
                     <div class="h-100 p-4 p-md-5 rounded-4 border position-relative" style="
                     background: rgba(255,255,255,0.06);
                     border-color: rgba(212,175,55,0.35) !important;
@@ -551,27 +823,30 @@
                 ">
 
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h3 class="text-white mb-0">Growth Expansion</h3>
-                            <span class="badge rounded-pill" style="
+                            <h3 class="text-white mb-0">Growth</h3>
+                            <!-- <span class="badge rounded-pill" style="
                             background: rgba(255,255,255,0.08);
                             border: 1px solid rgba(255,255,255,0.14);
                             color: rgba(255,255,255,0.85);
                         ">
                                 Most Popular
-                            </span>
+                            </span> -->
                         </div>
 
                         <p class="mb-4" style="color: rgba(255,255,255,0.60);">
-                            Ideal for SMEs scaling operations, hiring & going digital across HR & accounting.
+                            Ideal for SMEs scaling operations, hiring staff, and going digital across finance and HR.
                         </p>
 
                         <div class="mb-4">
                             <div class="d-flex align-items-end gap-2">
-                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 6,xxx</div>
                                 <div class="mb-2" style="color: rgba(255,255,255,0.55);">starting</div>
                             </div>
+                            <div class="d-flex align-items-end gap-2">
+                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 12,xxx</div>
+                            </div>
                             <div class="small" style="color: rgba(255,255,255,0.45);">
-                                Full digital stack + advisory
+                                Full digital stack + advisory support
+
                             </div>
                         </div>
 
@@ -581,21 +856,29 @@
                                 Included
                             </div>
                             <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.65);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months CoSec + Unlimited
-                                    Resolutions</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Bukku + e-Invoicing Module
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months Licensed Company
+                                    Secretary
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Employee Handbook + HR Templates
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Cloud Accounting System Setup +
+                                    e-Invoicing Module
+
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Multi-page Corporate Website (5–8
-                                    pages)</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Monthly SEO Report & Google
-                                    Business Setup</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Employee Handbook + Employment &
+                                    Policy Document Pack
+
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Corporate Website (5–8 Pages)
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Google Business Profile Setup +
+                                    Monthly SEO Reporting
+                                </li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> Dedicated WhatsApp Support Group
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Priority Financial & Compliance
-                                    Advisory</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Annual Audit Compliance Check
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Priority Compliance & Finance
+                                    Advisory
+                                </li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Annual Compliance & Audit
+                                    Readiness Check
                                 </li>
                             </ul>
                         </div>
@@ -603,7 +886,7 @@
                 </div>
 
                 <!-- Ultimate Digital Suite -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.35s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.35s">
                     <div class="h-100 p-4 p-md-5 rounded-4 border" style="
                     background: rgba(255,255,255,0.04);
                     border-color: rgba(212,175,55,0.40) !important;
@@ -611,14 +894,14 @@
                     backdrop-filter: blur(10px);
                 ">
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <h3 class="text-white mb-0">Ultimate Digital Suite</h3>
-                            <span class="badge rounded-pill" style="
+                            <h3 class="text-white mb-0">Ultimate</h3>
+                            <!-- <span class="badge rounded-pill" style="
                             background: rgba(212,175,55,0.16);
                             border: 1px solid rgba(212,175,55,0.35);
                             color: rgba(212,175,55,0.98);
                         ">
                                 Enterprise
-                            </span>
+                            </span> -->
                         </div>
 
                         <p class="mb-4" style="color: rgba(255,255,255,0.60);">
@@ -627,11 +910,13 @@
 
                         <div class="mb-4">
                             <div class="d-flex align-items-end gap-2">
-                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 12,xxx</div>
                                 <div class="mb-2" style="color: rgba(255,255,255,0.55);">starting</div>
                             </div>
+                            <div class="d-flex align-items-end gap-2">
+                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">RM 28,xxx</div>
+                            </div>
                             <div class="small" style="color: rgba(255,255,255,0.45);">
-                                Full transformation + premium support
+                                Complete transformation with premium support
                             </div>
                         </div>
 
@@ -641,37 +926,209 @@
                                 Included
                             </div>
                             <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.65);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months CoSec + Annual Return
-                                    (AR)</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> LHDN e-Invoice Implementation +
-                                    Auto Reconciliation</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom HR Policy + KPI Framework
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months Company Secretary +
+                                    Annual Return (AR)
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> LHDN-Compliant e-Invoicing
+                                    Implementation with Auto Reconciliation
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom HR Policy, SOP & KPI
+                                    Framework
+
                                 </li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> Full E-commerce Website + Payment
                                     Gateways</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Logistics & Inventory API
-                                    Integration</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Full SEO Strategy + Competitor
-                                    Analysis</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 1-on-1 Expert Advisory & Partner
-                                    Introductions</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Priority Compliance & Escalation
-                                    Handling</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Logistics & inventory integration
+                                    (API-ready)
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Full SEO Strategy & Competitor
+                                    Analysis
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 1-to-1 Expert Advisory & Partner
+                                    Introductions
+                                </li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Priority Compliance Handling &
+                                    Escalation Support</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Custom Package -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.45s">
+                    <div class="h-100 p-4 p-md-5 rounded-4 border" style="
+                    background: rgba(255,255,255,0.04);
+                    border-color: rgba(212,175,55,0.40) !important;
+                    box-shadow: 0 0 0 1px rgba(212,175,55,0.18) inset, 0 18px 45px rgba(0,0,0,0.55);
+                    backdrop-filter: blur(10px);
+    ">
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3 class="text-white mb-0">Custom</h3>
+                            <!-- <span class="badge rounded-pill" style="
+                background: rgba(212,175,55,0.20);
+                border: 1px dashed rgba(212,175,55,0.65);
+                color: rgba(212,175,55,1);
+            ">
+                                Bespoke
+                            </span> -->
+                        </div>
+
+                        <p class="mb-4" style="color: rgba(255,255,255,0.65);">
+                            Designed for established SMEs, complex operations, or businesses with unique requirements.
+                        </p>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-end gap-2">
+                                <div class="mb-2" style="color: rgba(255,255,255,0.55);">quotation</div>
+                            </div>
+                            <div class="d-flex align-items-end gap-2">
+                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">Custom</div>
+                            </div>
+                            <div class="small" style="color: rgba(255,255,255,0.45);">
+                                Based on scope, system complexity & compliance needs
+
+                            </div>
+                        </div>
+
+                        <div class="pt-3" style="border-top: 1px solid rgba(255,255,255,0.08);">
+                            <div class="text-uppercase small mb-3"
+                                style="letter-spacing: .12em; color: rgba(212,175,55,0.85);">
+                                INCLUDED (Framework-Based, Not Fixed)
+
+                            </div>
+                            <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.70);">
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Tailored Company Structure &
+                                    Compliance Strategy
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom Accounting, Tax &
+                                    E-Invoicing Setup
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Bespoke HR Policies, SOPs & KPI
+                                    Framework</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom Website, System or
+                                    E-Commerce Build</li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Payment Gateway, API & System
+                                    Integrations</li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Advanced SEO, Automation &
+                                    Digital Growth Strategy</li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> 1-to-1 Expert Advisory & Project
+                                    Management</li>
+                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Priority Support & Escalation
+                                    Handling</li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
 
             </div>
 
         </div>
     </div>
 
+    <!-- Section: Expert Insights (FAQ) -->
+    <section class="py-5 bg-dark">
+        <div class="container" style="max-width: 920px;">
+
+            <!-- Title -->
+            <div class="text-center mb-5">
+                <h3 class="fw-bold mb-2">Expert Insights (FAQ)</h3>
+            </div>
+
+            <div class="accordion faq-accordion" id="faqAccordion">
+
+                <!-- Q1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Is e-Invoicing (LHDN) mandatory now?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            LHDN is implementing e-Invoicing in phases. Our SQL/Bukku setups are
+                            100% compliant with the latest LHDN MyInvois requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Can a foreigner own 100% of a Sdn Bhd?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            In most industries, yes. Foreigners can hold 100% equity,
+                            but at least one director must be a resident of Malaysia.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            What is the difference between SQL and Bukku?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            SQL is robust for inventory-heavy businesses, while Bukku is
+                            cloud-native and SME-friendly. We help you choose the best fit.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4">
+                            When do I need to register for SST?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You must register for SST once your taxable turnover exceeds
+                            RM500,000 within a 12-month period. We monitor this for you.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5">
+                            Why only 12 months for CoSec?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            CoSec appointments are renewed annually. Our 12-month term ensures
+                            you receive updated compliance advice every year.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
 
-    <!-- Section 4: CTA -->
+
+
+    <!-- Section: CTA -->
     <section class="container-fluid cta-section py-5">
         <div class="container text-center py-5 ">
             <h4 class="text-white mb-3">Ready to streamline your accounting and tax processes?</h4>
@@ -725,13 +1182,41 @@
                 radar: [90, 40, 30, 40, 30],
                 saving: [100, 85],
                 lists: {
-                    cosec: ["12 months secretary service", "SSM Incorporation Fees (RM1,010)", "Statutory record maintenance"],
-                    acc: ["Basic bookkeeping setup", "Intro training for cloud accounting", "Monthly invoice entry guidance"],
-                    hr: ["Standard employment contract templates", "Offer Letter templates", "Basic resignation templates"],
-                    web: ["1-page high-conversion landing page", "Suitable for FB / Google ads", "Basic mobile responsiveness"],
-                    seo: ["Basic on-page SEO", "Google Search Console setup", "Meta Tag optimisation"],
-                    support: ["Email support (24h response)", "Quarterly tax reminders", "Bank account setup guidance"]
+                    cosec: [
+                        "12 Months CoSec",
+                        "SSM Fees Included",
+                        "Statutory Setup"
+                    ],
+
+                    acc: [
+                        "SQL / Bukku (Select One)",
+                        "Monthly Guide",
+                        "Fiscal Intro"
+                    ],
+
+                    hr: [
+                        "Employment Contract",
+                        "Offer Letter Suite",
+                        "Standard Leave"
+                    ],
+
+                    web: [
+                        "Landing Page",
+                        "Lead Hook",
+                        "Mobile Ready"
+                    ],
+
+                    seo: [
+                        "Search Indexing",
+                        "Meta Optimization"
+                    ],
+
+                    support: [
+                        "Email Support",
+                        "Bank Help"
+                    ]
                 }
+
             },
             growth: {
                 name: "Growth Expansion",
@@ -739,13 +1224,34 @@
                 radar: [95, 85, 75, 75, 65],
                 saving: [100, 75],
                 lists: {
-                    cosec: ["12 months secretary service", "Unlimited resolutions", "Support for banking appointments"],
-                    acc: ["Cloud Accounting (Bukku/Xero)", "Pre-configured e-Invoicing module", "Advanced inventory sync"],
-                    hr: ["Full employee handbook", "10+ operational templates", "Employment Act compliance review"],
-                    web: ["Multi-page corporate website (5–8 pages)", "Service & case study pages", "Interactive enquiry form"],
-                    seo: ["Keyword ranking optimisation", "Google Map (GMB) setup", "Monthly SEO performance report"],
-                    support: ["Dedicated WhatsApp group", "Priority financial advisory", "Annual compliance audit review"]
+                    cosec: [
+                        "12 Months CoSec",
+                        "Standard Resolutions",
+                        "Manager Access"
+                    ],
+                    acc: [
+                        "SQL / Bukku Licenses",
+                        "e-Invoicing Ready",
+                        "Bank Sync Integration"
+                    ],
+                    hr: [
+                        "Full Staff Handbook",
+                        "Statutory Reg Help"
+                    ],
+                    web: [
+                        "Corporate Site (5–8 pg)",
+                        "Blog CMS"
+                    ],
+                    seo: [
+                        "Advanced SEO",
+                        "Google Map (GMB)"
+                    ],
+                    support: [
+                        "WhatsApp Priority",
+                        "Quarterly Review"
+                    ]
                 }
+
             },
             ultimate: {
                 name: "Ultimate Digital Suite",
@@ -753,12 +1259,67 @@
                 radar: [100, 100, 95, 100, 90],
                 saving: [100, 70],
                 lists: {
-                    cosec: ["24 months secretary service", "Free Annual Return (AR)", "Advanced equity structure advisory"],
-                    acc: ["Cloud accounting + auto reconciliation", "Full LHDN e-Invoice implementation", "Quarterly tax planning"],
-                    hr: ["Custom HR policy design", "KPI-based performance management", "Labour dispute risk assessment"],
-                    web: ["Full-function e-commerce platform", "Multi-channel payment gateway integration", "Logistics & inventory API integration"],
-                    seo: ["Full-scale SEO authority strategy", "Competitor traffic analysis", "Long-term content marketing"],
-                    support: ["1-on-1 expert phone support", "Strategic partnership introductions", "Top priority for compliance tasks"]
+                    cosec: [
+                        "12 Months CoSec",
+                        "Full Resolution Suite",
+                        "Equity Advice"
+                    ],
+                    acc: [
+                        "SQL / Bukku (Select One)",
+                        "Full Inventory",
+                        "Custom Dash"
+                    ],
+                    hr: [
+                        "Custom HR Policy",
+                        "KPI Performance",
+                        "Audit"
+                    ],
+                    web: [
+                        "E-com Store",
+                        "CRM Integration"
+                    ],
+                    seo: [
+                        "Search Dominance",
+                        "Competitor Audit"
+                    ],
+                    support: [
+                        "1-on-1 Strategy",
+                        "LHDN Tax Advisory"
+                    ]
+                }
+
+            },
+            custom: {
+                name: "Custom Solution",
+                tagline: "“Designed for enterprise-scale, complex & bespoke operations”",
+                radar: [100, 95, 100, 100, 95],
+                saving: [100, 65],
+                lists: {
+                    cosec: [
+                        "12 Months CoSec",
+                        "Governance Support",
+                        "M&A Ready"
+                    ],
+                    acc: [
+                        "SQL / Bukku Enterprise",
+                        "ERP Integration"
+                    ],
+                    hr: [
+                        "Talent Sourcing",
+                        "ESOP Plans"
+                    ],
+                    web: [
+                        "Complex Web Apps",
+                        "Cyber Audit"
+                    ],
+                    seo: [
+                        "Growth Engine",
+                        "Brand Authority"
+                    ],
+                    support: [
+                        "Concierge Business Support",
+                        "Director Liaison"
+                    ]
                 }
             }
         };
@@ -831,7 +1392,7 @@
         function updateState(key) {
             const data = tiers[key];
 
-            ['starter', 'growth', 'ultimate'].forEach(k => {
+            ['starter', 'growth', 'ultimate', 'custom'].forEach(k => {
                 document.getElementById('tab-' + k).classList.remove('active');
             });
             document.getElementById('tab-' + key).classList.add('active');
