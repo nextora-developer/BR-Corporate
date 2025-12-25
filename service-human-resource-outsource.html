@@ -32,6 +32,72 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* CSS 辅助样式 */
+        .text-gradient {
+            background: linear-gradient(90deg, #d4af37, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .backdrop-blur {
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .x-small {
+            font-size: 0.75rem;
+        }
+
+        .transition-hover {
+            transition: all 0.3s ease;
+        }
+
+        .transition-hover:hover {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border-color: var(--bs-primary) !important;
+            transform: translateY(-5px);
+        }
+
+        .border-dashed {
+            border-style: dashed !important;
+            border-width: 2px !important;
+        }
+
+        /* 悬停效果：数字变大或背景微光 */
+        .col-lg-3:hover .rounded-circle {
+            background-color: #fff !important;
+            /* 变成白色或更亮的颜色 */
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .text-small {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+
+        /* 按钮悬停增强 */
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(var(--bs-primary-rgb), 0.3);
+        }
+
+        .btn-outline-success:hover {
+            background-color: #25d366;
+            /* WhatsApp Green */
+            border-color: #25d366;
+            color: #fff !important;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 
 <body>
@@ -64,224 +130,838 @@
     </div>
     <!-- Header End -->
 
+    <!-- HERO -->
+    <div class="container-fluid bg-dark position-relative overflow-hidden" style="padding: 100px 0;">
 
-    <!-- Service Start -->
-    <div class="container-fluid py-5">
+        <div class="position-absolute top-0 end-0 translate-middle-y opacity-25"
+            style="width: 500px; height: 500px; background: radial-gradient(circle, var(--bs-primary) 0%, transparent 70%); filter: blur(80px); pointer-events: none;">
+        </div>
+
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+                    <div
+                        class="badge rounded-pill bg-outline-primary border border-primary text-primary px-3 py-2 mb-4 fw-bold">
+                        <i class="fa-solid fa-shield-halved me-2"></i> HR & COMPLIANCE MALAYSIA
+                    </div>
+
+                    <h1 class="display-3 fw-bold text-white mb-3">
+                        Hire and manage staff <span class="text-primary text-gradient">confidently.</span>
+                    </h1>
+
+                    <p class="lead text-white-50 mb-4 pb-2" style="max-width: 600px;">
+                        Whether you’re hiring your first employee or managing a growing team, we help you set up
+                        essential documentation and reduce compliance risks — <span class="text-white">without the cost
+                            of a full in-house HR team.</span>
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-5">
+                        <a href="#contact" class="btn btn-primary btn-lg px-4 fw-bold shadow">
+                            Get HR Support <i class="fa-solid fa-arrow-right ms-2 small"></i>
+                        </a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">
+                            View Services
+                        </a>
+                    </div>
+
+                    <div class="row g-3 pt-4 border-top border-secondary border-opacity-50">
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center text-white-50 small">
+                                <i class="fa-solid fa-circle-check text-primary me-2"></i> SMEs & Startups
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center text-white-50 small">
+                                <i class="fa-solid fa-circle-check text-primary me-2"></i> Payroll Support
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center text-white-50 small">
+                                <i class="fa-solid fa-circle-check text-primary me-2"></i> Compliance Ready
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="position-relative">
+                        <div
+                            class="bg-secondary bg-opacity-10 border border-secondary p-4 rounded-4 backdrop-blur shadow-lg">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="bg-primary rounded p-2 text-dark">
+                                    <i class="fa-solid fa-file-invoice fs-4"></i>
+                                </div>
+                                <h5 class="text-white mb-0">Compliance Guidance</h5>
+                            </div>
+                            <p class="text-white-50 small mb-0">
+                                HR documents, payroll support, and guidance to keep your business fully compliant with
+                                Malaysian labor laws.
+                            </p>
+                        </div>
+
+                        <div class="position-absolute d-none d-md-block shadow-lg p-3 bg-dark border border-secondary rounded-3"
+                            style="top: -20px; right: -20px; width: 180px; transform: rotate(5deg);">
+                            <div class="text-primary small fw-bold mb-1">Payroll Ready</div>
+                            <div class="progress" style="height: 6px; background: #333;">
+                                <div class="progress-bar bg-primary" style="width: 100%"></div>
+                            </div>
+                            <div class="text-white-50 x-small mt-2">Monthly Admin Sync</div>
+                        </div>
+
+                        <div class="position-absolute d-none d-md-block shadow-lg p-3 bg-dark border border-secondary rounded-3"
+                            style="bottom: -30px; left: -40px; width: 220px; transform: rotate(-3deg);">
+                            <div class="d-flex gap-2 align-items-center">
+                                <i class="fa-solid fa-users text-primary"></i>
+                                <span class="text-white small fw-semibold">Team Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Why Your Business Needs HR Outsourcing -->
+    <div class="container-fluid py-5 bg-dark position-relative">
         <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5>Services</h5>
-                        <h1>How We Help You</h1>
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Strategic Advantage</h6>
+                <h2 class="text-white display-5 fw-bold">Why Your Business Needs HR Outsourcing</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 offset-md-1">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border-start border-primary border-4 shadow-sm h-100 transition-up">
+                        <div class="text-primary mb-3"><i class="fa-solid fa-piggy-bank fs-3"></i></div>
+                        <h5 class="text-white">Cost-Smart</h5>
+                        <p class="text-white-50 small mb-0">Save on full-time HR headcount with flexible outsourcing
+                            support that scales with you.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border-start border-primary border-4 shadow-sm h-100 transition-up">
+                        <div class="text-primary mb-3"><i class="fa-solid fa-gavel fs-3"></i></div>
+                        <h5 class="text-white">Compliance-First</h5>
+                        <p class="text-white-50 small mb-0">Reduce HR disputes and admin risks with proper documentation
+                            and clear local compliance processes.</p>
+                    </div>
+                </div>
+                <div class="col-md-10 offset-md-1">
+                    <div class="p-4 rounded-4 bg-primary text-dark d-flex align-items-center gap-4 shadow-lg my-2">
+                        <i class="fa-solid fa-bolt-lightning fs-1 opacity-50"></i>
+                        <div>
+                            <h4 class="fw-bold mb-1">Faster Hiring Setup</h4>
+                            <p class="mb-0 fw-semibold">Ready templates + structured onboarding so you can hire faster
+                                and smoother.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border-start border-warning border-4 shadow-sm h-100 transition-up">
+                        <div class="text-warning mb-3"><i class="fa-solid fa-diagram-project fs-3"></i></div>
+                        <h5 class="text-white">Clear HR Process</h5>
+                        <p class="text-white-50 small mb-0">Leave, attendance, payroll, and staff files are organised
+                            into one seamless workflow.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border-start border-primary border-4 shadow-sm h-100 transition-up">
+                        <div class="text-primary mb-3"><i class="fa-solid fa-brain fs-3"></i></div>
+                        <h5 class="text-white">Peace of Mind</h5>
+                        <p class="text-white-50 small mb-0">You focus on growth — we handle the complex HR admin and
+                            regulatory guidance.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- 01 Payroll Management -->
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-payroll.png"
-                                alt="Payroll Management">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Payroll Management</h3>
-                            <p class="mb-4">
-                                Accurate and timely payroll processing to ensure employees
-                                are paid correctly and on schedule.
-                                <br><br>
-                                We manage salary calculations, allowances, deductions and
-                                payroll records in accordance with statutory requirements.
-                            </p>
-                            <a class="btn btn-outline-primary border-2 px-4"
-                                href="services/payroll-hr/payroll-management.html">
-                                Read More <i class="fa fa-arrow-right ms-1"></i>
-                            </a>
-                        </div>
-                    </div>
+    <!-- Section 2: What We Handle for You -->
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5">
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="text-white display-6 fw-bold">What We Handle <span
+                            class="text-primary text-decoration-underline">for You</span></h2>
+                    <p class="text-white-50 mt-3">Comprehensive HR support tailored for Malaysian SMEs, ensuring every
+                        record and process is audit-ready.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="text-primary small fw-bold">* Final scope depends on headcount & roles</div>
                 </div>
             </div>
 
-            <!-- 02 HR Documentation Support -->
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-hr-documentation.png"
-                                alt="HR Documentation Support">
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary transition-hover">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width:45px; height:45px;">01</div>
+                            <h4 class="text-white ms-3 mb-0">HR Documentation</h4>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">HR Documentation Support</h3>
-                            <p class="mb-4">
-                                Preparation and maintenance of essential HR documents
-                                to support your employment processes.
-                                <br><br>
-                                Includes employee records, internal policies and
-                                documentation required for compliance and reference.
-                            </p>
-                            <a class="btn btn-outline-primary border-2 px-4"
-                                href="services/payroll-hr/hr-documentation.html">
-                                Read More <i class="fa fa-arrow-right ms-1"></i>
-                            </a>
-                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Offer letters & employment contracts <strong
+                                        class="text-white">(role-customised)</strong></span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Probation & confirmation management</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Resignation acceptance & clearance checklists</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Basic warning letter templates for proper
+                                    records</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary transition-hover">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width:45px; height:45px;">02</div>
+                            <h4 class="text-white ms-3 mb-0">Payroll & Monthly Admin</h4>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Payroll calculation support & digital payslips</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Monthly summary (allowances & deductions
+                                    tracking)</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Basic leave & attendance tracker setup</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary transition-hover">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width:45px; height:45px;">03</div>
+                            <h4 class="text-white ms-3 mb-0">Statutory Readiness</h4>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">EPF / SOCSO / EIS setup guidance</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Compliance reminders based on agreed scope</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">HR recordkeeping structure for <strong
+                                        class="text-white">audit readiness</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary transition-hover">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                                style="width:45px; height:45px;">04</div>
+                            <h4 class="text-white ms-3 mb-0">HR Policy & SOP</h4>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Policy setup: Leave, Attendance, OT, & Claims</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Employee handbook <strong
+                                        class="text-white">(SME-friendly)</strong></span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1 me-2"></i>
+                                <span class="text-white-50 small">Clear Onboarding / Offboarding SOP</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Our Support Model (your “Business Model” bar) -->
+    <div class="container-fluid py-5 bg-dark border-top border-secondary border-opacity-10">
+        <div class="container py-5">
+
+            <div class="text-center mb-5">
+                <h2 class="text-white fw-bold">Our Support Model</h2>
+                <p class="text-white-50">Flexible engagement options to suit your business stage.</p>
             </div>
 
-            <!-- 03 Employment Contract -->
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-employment-contract.png"
-                                alt="Employment Contract">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-secondary bg-opacity-10 border-secondary rounded-4 p-4 text-center">
+                        <div class="mb-3 text-white-50">
+                            <i class="fa-solid fa-box-open fs-2"></i>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Employment Contract</h3>
-                            <p class="mb-4">
-                                Drafting and review of employment contracts
-                                aligned with labour regulations and best practices.
-                                <br><br>
-                                Designed to clearly define roles, responsibilities,
-                                benefits and employment terms.
-                            </p>
-                            <a class="btn btn-outline-primary border-2 px-4"
-                                href="services/payroll-hr/employment-contract.html">
-                                Read More <i class="fa fa-arrow-right ms-1"></i>
-                            </a>
+                        <h4 class="text-white mb-3">HR Setup Pack</h4>
+                        <p class="text-white-50 small mb-4">Ideal for foundational compliance and clear structure from
+                            day one.</p>
+                        <div class="mt-auto">
+                            <ul class="list-unstyled text-start small text-white-50 mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Statutory Documents
+                                </li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Core HR Policies
+                                </li>
+                                <li><i class="fa-solid fa-check text-primary me-2"></i>Workflow Setup</li>
+                            </ul>
+                            <div class="badge bg-secondary text-white-50 px-3 py-2">One-Time Project</div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="card h-100 bg-dark border-primary rounded-4 p-4 text-center shadow-lg position-relative overflow-hidden">
+                        <div class="position-absolute bg-primary text-dark fw-bold px-5 py-1"
+                            style="top: 20px; right: -35px; transform: rotate(45deg); font-size: 0.75rem;">
+                            RECOMMENDED
+                        </div>
+
+                        <div class="mb-3 text-primary">
+                            <i class="fa-solid fa-calendar-check fs-2"></i>
+                        </div>
+                        <h4 class="text-white mb-3">Monthly Retainer</h4>
+                        <p class="text-white-50 small mb-4">Ongoing HR + payroll support for businesses that want
+                            continuous peace of mind.</p>
+                        <div class="mt-auto">
+                            <ul class="list-unstyled text-start small text-white mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Full Payroll Admin
+                                </li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Compliance Updates
+                                </li>
+                                <li><i class="fa-solid fa-check text-primary me-2"></i>Ongoing HR Guidance</li>
+                            </ul>
+                            <div class="btn btn-primary w-100 fw-bold">Most Popular Choice</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 bg-secondary bg-opacity-10 border-secondary rounded-4 p-4 text-center">
+                        <div class="mb-3 text-white-50">
+                            <i class="fa-solid fa-clock-rotate-left fs-2"></i>
+                        </div>
+                        <h4 class="text-white mb-3">Short-Term Support</h4>
+                        <p class="text-white-50 small mb-4">Perfect for new team expansion or transitional growth
+                            phases.</p>
+                        <div class="mt-auto">
+                            <ul class="list-unstyled text-start small text-white-50 mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>3–6 Months Duration
+                                </li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>Scaling Assistance
+                                </li>
+                                <li><i class="fa-solid fa-check text-primary me-2"></i>Interim HR Admin</li>
+                            </ul>
+                            <div class="badge bg-secondary text-white-50 px-3 py-2">Fixed Duration</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Deliverables (What you’ll receive) -->
+    <div class="container-fluid py-5 bg-secondary bg-opacity-10">
+        <div class="container py-5">
+
+            <div class="text-center mb-5">
+                <h2 class="text-white fw-bold">What You’ll Receive</h2>
+                <p class="text-primary small fw-bold text-uppercase tracking-wider">The Tangible Deliverables of Our
+                    Service</p>
             </div>
 
-            <!-- 04 Statutory Contribution Guidance -->
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="img/service-statutory-contribution.png"
-                                alt="Statutory Contribution Guidance">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="card h-100 bg-dark border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="p-4 bg-primary bg-opacity-10 border-bottom border-primary border-opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-white mb-0">HR Setup Pack</h5>
+                                <i class="fa-solid fa-folder-plus text-white fs-4"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Statutory Contribution Guidance</h3>
-                            <p class="mb-4">
-                                Guidance on mandatory statutory contributions
-                                such as EPF, SOCSO, EIS and related obligations.
-                                <br><br>
-                                Helps ensure correct calculation, submission
-                                and ongoing compliance with employment regulations.
-                            </p>
-                            <a class="btn btn-outline-primary border-2 px-4"
-                                href="services/payroll-hr/statutory-contribution.html">
-                                Read More <i class="fa fa-arrow-right ms-1"></i>
-                            </a>
+                        <div class="card-body p-4">
+                            <div class="d-flex mb-3">
+                                <i class="fa-regular fa-file-lines text-primary me-3 mt-1"></i>
+                                <div>
+                                    <div class="text-white small fw-bold">Employment Contracts</div>
+                                    <div class="text-white-50 x-small">Offer letter set + role-specific terms</div>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <i class="fa-regular fa-file-code text-primary me-3 mt-1"></i>
+                                <div>
+                                    <div class="text-white small fw-bold">Admin Templates</div>
+                                    <div class="text-white-50 x-small">Probation, Confirmation & Resignation</div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-regular fa-file-excel text-primary me-3 mt-1"></i>
+                                <div>
+                                    <div class="text-white small fw-bold">File Structure</div>
+                                    <div class="text-white-50 x-small">Organised staff master list templates</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4">
+                    <div class="card h-100 bg-dark border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="p-4 bg-primary bg-opacity-10 border-bottom border-primary border-opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-white mb-0">HR Policy Pack</h5>
+                                <i class="fa-solid fa-book text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="pb-2 mb-2 border-bottom border-secondary border-opacity-50">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary me-2">DOC</span>
+                                    <span class="text-white-50 small">Leave & Attendance Policy</span>
+                                </li>
+                                <li class="pb-2 mb-2 border-bottom border-secondary border-opacity-50">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary me-2">DOC</span>
+                                    <span class="text-white-50 small">Claims & Allowance Policy</span>
+                                </li>
+                                <li class="pb-2 mb-2 border-bottom border-secondary border-opacity-50">
+                                    <span class="badge bg-primary bg-opacity-10 text-primary me-2">SOP</span>
+                                    <span class="text-white-50 small">Disciplinary Workflow</span>
+                                </li>
+                                <li>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary me-2">PDF</span>
+                                    <span class="text-white-50 small">SME Employee Handbook</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div
+                        class="card h-100 bg-dark border-0 shadow-sm rounded-4 overflow-hidden border-dashed border-secondary">
+                        <div class="p-4 bg-primary bg-opacity-10 border-bottom border-secondary border-opacity-25">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-white mb-0">Monthly Support</h5>
+                                <i class="fa-solid fa-calendar-check text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="bg-secondary bg-opacity-10 rounded-3 p-3 mb-3">
+                                <div class="text-primary x-small fw-bold mb-1">RECURRING</div>
+                                <p class="text-white-50 small mb-0">Digital Payslips & Monthly Payroll Summary reports.
+                                </p>
+                            </div>
+                            <ul class="list-unstyled small text-white-50 ps-1">
+                                <li class="mb-2"><i class="fa-solid fa-check-double text-primary me-2"></i>Attendance
+                                    Tracking</li>
+                                <li><i class="fa-solid fa-check-double text-primary me-2"></i>Monthly Checklist &
+                                    Reminders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: How We Work -->
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5">
+
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase tracking-widest">Process</h6>
+                <h2 class="text-white display-5 fw-bold">How We Work</h2>
+                <div class="mx-auto bg-primary mt-3" style="height: 3px; width: 50px;"></div>
+            </div>
+
+            <div class="row g-4 position-relative">
+
+                <div class="position-absolute top-50 start-0 w-100 border-top border-secondary border-dashed d-none d-lg-block"
+                    style="z-index: 0; opacity: 0.2;"></div>
+
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="text-center p-4 h-100">
+                        <div class="rounded-circle bg-primary text-dark fw-bold d-flex align-items-center justify-content-center mx-auto mb-4 shadow-lg"
+                            style="width: 70px; height: 70px; border: 5px solid rgba(255,255,255,0.1);">
+                            01
+                        </div>
+                        <h5 class="text-white mb-3">Consult & Assess</h5>
+                        <p class="text-white-50 small mb-0">
+                            We understand your business, staff roles, and current HR setup to tailor the right strategy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="text-center p-4 h-100">
+                        <div class="rounded-circle bg-primary text-dark fw-bold d-flex align-items-center justify-content-center mx-auto mb-4 shadow-lg"
+                            style="width: 70px; height: 70px; border: 5px solid rgba(255,255,255,0.1);">
+                            02
+                        </div>
+                        <h5 class="text-white mb-3">Setup & Structure</h5>
+                        <p class="text-white-50 small mb-0">
+                            We prepare documents, policies, and a clean HR workflow designed for your specific needs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="text-center p-4 h-100">
+                        <div class="rounded-circle bg-primary text-dark fw-bold d-flex align-items-center justify-content-center mx-auto mb-4 shadow-lg"
+                            style="width: 70px; height: 70px; border: 5px solid rgba(255,255,255,0.1);">
+                            03
+                        </div>
+                        <h5 class="text-white mb-3">Monthly Support</h5>
+                        <p class="text-white-50 small mb-0">
+                            We support payroll and admin tasks based on your selected plan to ensure smooth operations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 position-relative" style="z-index: 1;">
+                    <div class="text-center p-4 h-100">
+                        <div class="rounded-circle bg-primary text-dark fw-bold d-flex align-items-center justify-content-center mx-auto mb-4 shadow-lg"
+                            style="width: 70px; height: 70px; border: 5px solid rgba(255,255,255,0.1);">
+                            04
+                        </div>
+                        <h5 class="text-white mb-3">Review & Improve</h5>
+                        <p class="text-white-50 small mb-0">
+                            Continuous refinement of policies and processes as your team grows and regulations evolve.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 6: What We Need From You -->
+    <div class="container-fluid py-5 bg-dark border-top border-secondary border-opacity-10">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-5">
+                    <div class="p-2">
+                        <h6 class="text-primary fw-bold text-uppercase mb-3">Onboarding</h6>
+                        <h2 class="text-white display-6 fw-bold mb-4">Getting Started is Simple.</h2>
+                        <p class="text-white-50 mb-4">To ensure a smooth setup, we only need a few key details to begin
+                            building your HR framework.</p>
+
+                        <div
+                            class="d-flex align-items-center gap-3 bg-secondary bg-opacity-10 p-3 rounded-3 border-start border-primary border-3">
+                            <i class="fa-solid fa-bolt text-primary fs-4"></i>
+                            <span class="text-white small fw-semibold">Quick setup: Documentation typically begins
+                                within 24 hours of receiving these details.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <div
+                                class="h-100 p-4 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 d-flex flex-column justify-content-center">
+                                <div class="text-primary mb-3"><i class="fa-solid fa-building-circle-check fs-3"></i>
+                                </div>
+                                <h6 class="text-white fw-bold mb-2">Company Details</h6>
+                                <p class="text-white-50 text-small mb-0">Business nature and basic company information
+                                    for
+                                    statutory alignment.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div
+                                class="h-100 p-4 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 d-flex flex-column justify-content-center">
+                                <div class="text-primary mb-3"><i class="fa-solid fa-id-card-clip fs-3"></i></div>
+                                <h6 class="text-white fw-bold mb-2">Staff Role Details</h6>
+                                <p class="text-white-50 text-small mb-0">Job scope, working hours, salary, probation
+                                    periods, and benefits.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div
+                                class="h-100 p-4 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 d-flex flex-column justify-content-center">
+                                <div class="text-primary mb-3"><i class="fa-solid fa-users-viewfinder fs-3"></i></div>
+                                <h6 class="text-white fw-bold mb-2">Payroll Essentials</h6>
+                                <p class="text-white-50 text-small mb-0">Employee info (Name, IC, Bank, Allowances) —
+                                    only
+                                    if payroll is included.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div
+                                class="h-100 p-4 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 d-flex flex-column justify-content-center">
+                                <div class="text-primary mb-3"><i class="fa-solid fa-file-export fs-3"></i></div>
+                                <h6 class="text-white fw-bold mb-2">Existing Documents</h6>
+                                <p class="text-white-50 text-small mb-0">Any previous HR documents or policies you've
+                                    used
+                                    (if available).</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 7:  Compliance Checklist (SME) -->
+    <div class="container-fluid py-5 bg-secondary bg-opacity-10">
+        <div class="container py-5">
+
+            <div class="text-center mb-5">
+                <h2 class="text-white fw-bold">SME HR Compliance Checklist</h2>
+                <p class="text-white-50">Check your current standing against Malaysian HR standards.</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <div class="bg-dark p-4 rounded-4 border border-secondary h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded p-2">
+                                <i class="fa-solid fa-file-signature text-white fs-4"></i>
+                            </div>
+                            <h5 class="text-white ms-3 mb-0">A) Employment Documentation</h5>
+                        </div>
+                        <div class="ps-5">
+                            <ul class="list-unstyled text-white-50 small">
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> Signed
+                                    contract/offer letter for every employee</li>
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> Clear
+                                    probation & confirmation terms</li>
+                                <li><i class="fa-regular fa-square-check text-primary me-2"></i> Working hours, leave, &
+                                    salary terms documented</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bg-dark p-4 rounded-4 border border-secondary h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded p-2">
+                                <i class="fa-solid fa-calculator text-white fs-4"></i>
+                            </div>
+                            <h5 class="text-white ms-3 mb-0">B) Payroll & Records</h5>
+                        </div>
+                        <div class="ps-5">
+                            <ul class="list-unstyled text-white-50 small">
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> Payslips
+                                    issued & payroll records maintained</li>
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> Leave &
+                                    attendance tracking in place</li>
+                                <li><i class="fa-regular fa-square-check text-primary me-2"></i> Claims/allowances recorded
+                                    properly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bg-dark p-4 rounded-4 border border-secondary h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded p-2">
+                                <i class="fa-solid fa-landmark text-white fs-4"></i>
+                            </div>
+                            <h5 class="text-white ms-3 mb-0">C) Statutory Readiness</h5>
+                        </div>
+                        <div class="ps-5">
+                            <ul class="list-unstyled text-white-50 small">
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> EPF /
+                                    SOCSO / EIS registration readiness</li>
+                                <li><i class="fa-regular fa-square-check text-primary me-2"></i> Monthly reminders for
+                                    compliance items</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="bg-dark p-4 rounded-4 border border-secondary h-100 shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded p-2">
+                                <i class="fa-solid fa-scale-balanced text-white fs-4"></i>
+                            </div>
+                            <h5 class="text-white ms-3 mb-0">D) HR Governance</h5>
+                        </div>
+                        <div class="ps-5">
+                            <ul class="list-unstyled text-white-50 small">
+                                <li class="mb-2"><i class="fa-regular fa-square-check text-primary me-2"></i> Policies
+                                    clearly communicated to staff</li>
+                                <li><i class="fa-regular fa-square-check text-primary me-2"></i> Disciplinary &
+                                    resignation steps documented</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </div>
 
-    <!-- Service End -->
-
-    <div class="container-fluid py-5 bg-secondary">
+    <!-- Section 8: What’s Not Included  -->
+    <div class="container-fluid py-5 bg-dark border-top border-secondary border-opacity-25">
         <div class="container py-5">
 
-            <!-- Title -->
-            <div class="text-center mb-5">
-                <h1 class="text-white">How We Work</h1>
-                <p class="text-white-50 mb-0">
-                    We follow a structured and compliant approach to manage payroll
-                    and HR-related matters — ensuring accuracy and regulatory compliance.
-                </p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-4">
+                    <div class="p-3">
+                        <h3 class="text-white fw-bold mb-3">Service Boundaries</h3>
+                        <p class="text-white-50 small mb-4">
+                            To keep our service scope clear and delivery smooth, we define our boundaries upfront. This
+                            ensures our core HR support remains focused and efficient.
+                        </p>
+                        <div class="p-3 rounded-3 bg-secondary bg-opacity-10 border-start border-secondary border-3">
+                            <p class="text-white-50 x-small mb-0 italic">
+                                "Transparency is the foundation of a successful partnership."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="bg-secondary bg-opacity-10 rounded-4 p-4 border border-secondary border-opacity-25">
+                        <h5 class="text-white-50 small fw-bold text-uppercase mb-4 tracking-wider">
+                            <i class="fa-solid fa-circle-exclamation me-2"></i>What’s Not Included
+                        </h5>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">Legal representation or labour dispute
+                                        litigation</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">IR hearings or complex case handling</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">Retrenchment & complex termination cases</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">Foreign worker / permit applications</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">Detailed tax advisory (Accounting scope)</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex gap-3 py-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span class="text-white-50 small">Full-time on-site HR placement</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top border-secondary border-opacity-25">
+                            <p class="text-primary small mb-0 italic">
+                                <i class="fa-solid fa-info-circle me-1"></i>
+                                If your case is complex, we will advise first and propose a separate scope or solution.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Process Timeline -->
-            <div class="process-steps position-relative">
+    <div class="container-fluid py-5 bg-dark position-relative overflow-hidden">
 
-                <div class="row g-4 text-center">
+        <div class="position-absolute bottom-0 start-0 translate-middle-y opacity-25"
+            style="width: 400px; height: 400px; background: radial-gradient(circle, var(--bs-primary) 0%, transparent 70%); filter: blur(100px); pointer-events: none;">
+        </div>
 
-                    <!-- Step 1 -->
-                    <div class="col-md-3">
-                        <div class="process-step bg-dark p-4 rounded-4 border border-gold h-100 wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <div class="step-icon-wrap mx-auto mb-3">
-                                <span class="step-number">01</span>
-                                <i class="fa-solid fa-comments step-icon"></i>
-                            </div>
-                            <h6 class="text-uppercase text-white mb-2">Consult & Review</h6>
-                            <p class="text-white-50 small mb-0">
-                                We review your workforce structure, payroll process
-                                and statutory contribution requirements.
-                            </p>
-                        </div>
+        <div class="container py-5 position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9 col-xl-8">
+
+                    <h2 class="display-5 text-white fw-bold mb-4">
+                        Need HR Support Without Hiring a <span class="text-primary">Full-Time HR Team?</span>
+                    </h2>
+
+                    <p class="lead text-white-50 mb-5 px-md-5">
+                        Tell us your <span class="text-white fw-semibold">headcount and roles</span> — we’ll recommend
+                        the right HR support scope and help you build a clean, compliant HR foundation.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-4">
+                        <a href="mailto:your@email.com"
+                            class="btn btn-primary btn-lg px-5 py-3 fw-bold shadow-lg shadow-primary-50">
+                            <i class="fa-solid fa-calendar-check me-2"></i>Request Consultation
+                        </a>
+                        <a href="https://wa.me/yourphone"
+                            class="btn btn-outline-success btn-lg px-5 py-3 fw-bold border-2 shadow-sm">
+                            <i class="fa-brands fa-whatsapp me-2 fs-4"></i>WhatsApp Us
+                        </a>
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="col-md-3">
-                        <div class="process-step bg-dark p-4 rounded-4 border border-gold h-100 wow fadeInUp"
-                            data-wow-delay="0.2s">
-                            <div class="step-icon-wrap mx-auto mb-3">
-                                <span class="step-number">02</span>
-                                <i class="fa-solid fa-lightbulb step-icon"></i>
-                            </div>
-                            <h6 class="text-uppercase text-white mb-2">Plan & Setup</h6>
-                            <p class="text-white-50 small mb-0">
-                                We structure payroll calculations, HR documentation
-                                and statutory contribution framework.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="col-md-3">
-                        <div class="process-step bg-dark p-4 rounded-4 border border-gold h-100 wow fadeInUp"
-                            data-wow-delay="0.3s">
-                            <div class="step-icon-wrap mx-auto mb-3">
-                                <span class="step-number">03</span>
-                                <i class="fa-solid fa-gears step-icon"></i>
-                            </div>
-                            <h6 class="text-uppercase text-white mb-2">Process & Manage</h6>
-                            <p class="text-white-50 small mb-0">
-                                We manage payroll processing, HR records,
-                                employment contracts and statutory submissions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="col-md-3">
-                        <div class="process-step bg-dark p-4 rounded-4 border border-gold h-100 wow fadeInUp"
-                            data-wow-delay="0.4s">
-                            <div class="step-icon-wrap mx-auto mb-3">
-                                <span class="step-number">04</span>
-                                <i class="fa-solid fa-chart-line step-icon"></i>
-                            </div>
-                            <h6 class="text-uppercase text-white mb-2">Review & Support</h6>
-                            <p class="text-white-50 small mb-0">
-                                We review payroll accuracy, ensure compliance
-                                and provide ongoing advisory support.
-                            </p>
-                        </div>
+                    <div class="mt-4 pt-2">
+                        <p class="text-white-50 x-small mb-0 opacity-75">
+                            <i class="fa-solid fa-circle-info me-1"></i>
+                            Note: Fees depend on number of employees, document complexity, and monthly support scope.
+                        </p>
                     </div>
 
                 </div>
             </div>
-
-            <p class="fw-bold text-primary text-center mt-5">
-                We don’t just process payroll — we support your people operations with accuracy and confidence.
-            </p>
-
         </div>
     </div>
 
