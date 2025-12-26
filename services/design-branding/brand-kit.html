@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BRIF - Brand Kit & Monthly Design Support</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../../img/favicon.svg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet">
+
+    <style>
+        .text-gradient-gold {
+            background: linear-gradient(to right, #D4AF37, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .spinning-aura {
+            animation: rotateAura 20s linear infinite;
+        }
+
+        @keyframes rotateAura {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        .shadow-gold {
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .backdrop-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .x-small {
+            font-size: 0.85rem;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .tracking-widest {
+            letter-spacing: 0.25em;
+        }
+
+        .shadow-gold-inset {
+            box-shadow: inset 0 0 50px rgba(212, 175, 55, 0.05);
+        }
+
+        /* 自定义列表间距 */
+        .space-y-4>li:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        .hover-feature {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: default;
+        }
+
+        .hover-feature:hover {
+            background-color: rgba(212, 175, 55, 0.05) !important;
+            border-color: rgba(212, 175, 55, 0.3) !important;
+            transform: translateY(-8px);
+        }
+
+        .border-dashed {
+            border-style: dashed !important;
+        }
+
+        .hover-glow:hover {
+            background-color: rgba(212, 175, 55, 0.05) !important;
+            border-color: rgba(212, 175, 55, 0.3) !important;
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* 脉冲线条动画 */
+        .pulse-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+            position: absolute;
+            top: 50%;
+            animation: moveLine 4s linear infinite;
+        }
+
+        @keyframes moveLine {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .transition-hover:hover {
+            border-color: rgba(212, 175, 55, 0.2) !important;
+            background-color: rgba(10, 10, 10, 1) !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid p-0">
+        <div id="site-navbar"></div>
+        <div class="page-header pb-5">
+            <div class="container text-center py-5">
+                <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Brand Kit & Monthly Design Support</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                        <li class="breadcrumb-item"><a class="text-white" href="../../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white"
+                                href="../../service-design-branding.html">Design & Branding</a></li>
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Brand Kit & Monthly Design
+                            Support
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <section class="position-relative bg-dark min-vh-70 d-flex align-items-center overflow-hidden">
+
+        <div class="position-absolute top-50 start-50 translate-middle opacity-20" style="z-index: 1;">
+            <div class="spinning-aura"
+                style="width: 60vw; height: 60vw; background: radial-gradient(circle, #D4AF37 0%, transparent 70%); filter: blur(120px);">
+            </div>
+        </div>
+
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10"
+            style="z-index: 1; background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7 text-center text-lg-start">
+                    <div
+                        class="d-inline-flex align-items-center mb-4 px-3 py-1 rounded-pill bg-primary bg-opacity-10 border border-primary border-opacity-30">
+                        <span class="pulse-dot me-2"></span>
+                        <span class="text-white fw-bold text-uppercase tracking-widest small">Subscription-Based
+                            Design</span>
+                    </div>
+
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        BRAND KIT & <br>
+                        <span class="text-gradient-gold italic-serif">MONTHLY SUPPORT</span>
+                    </h1>
+
+                    <p class="lead text-white-50 mb-5 pe-lg-5">
+                        For businesses that need <span class="text-white fw-bold">consistent marketing creatives</span>
+                        every month. Your dedicated design team, minus the overhead.
+                    </p>
+                </div>
+
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-white border-opacity-10 backdrop-blur shadow-2xl position-relative">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="text-white fw-bold x-small tracking-widest">MONTHLY CREATIVE QUOTA</div>
+                            <div class="badge bg-primary text-dark x-small">ACTIVE</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="x-small text-white-50">Social Media Campaign</span>
+                                <span class="x-small text-primary">85%</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1 text-white-50 x-small">
+                                <span>Promotional Flyers</span>
+                                <span>Completed</span>
+                            </div>
+                            <div class="progress bg-dark" style="height: 6px;">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top border-white border-opacity-10">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="rounded-circle bg-primary" style="width: 10px; height: 10px;"></div>
+                                <span class="x-small text-white-50 italic">Your Brand Identity: Guarded &
+                                    Evolving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-2">The Deliverables</h6>
+                <h2 class="text-white display-6 fw-bold">What You’ll Receive</h2>
+                <div class="mx-auto bg-primary mt-3" style="height: 2px; width: 40px;"></div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 p-md-5 rounded-5 bg-secondary bg-opacity-10 border border-secondary border-opacity-20 position-relative">
+                        <span class="badge bg-primary text-dark position-absolute top-0 end-0 m-4 px-3 py-2">ONE-TIME
+                            SETUP</span>
+
+                        <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-4 small">Phase 01</h6>
+                        <h3 class="text-white fw-bold mb-4">The Brand Kit</h3>
+                        <p class="text-white-50 x-small mb-5">Establishing your brand’s DNA to ensure every future
+                            design stays 100% on-brand.</p>
+
+                        <ul class="list-unstyled space-y-4">
+                            <li class="d-flex align-items-start gap-3 mb-4">
+                                <div class="mt-1"><i class="fa-solid fa-palette text-primary"></i></div>
+                                <div>
+                                    <h6 class="text-white mb-1 small">Visual Identity System</h6>
+                                    <p class="text-white-50 x-small mb-0">Custom brand colors, typography pairings, and
+                                        layout grid systems.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3 mb-4">
+                                <div class="mt-1"><i class="fa-solid fa-clapperboard text-primary"></i></div>
+                                <div>
+                                    <h6 class="text-white mb-1 small">Social Media Templates</h6>
+                                    <p class="text-white-50 x-small mb-0">Reusable Post & Story templates, plus
+                                        Highlight covers and Profile assets.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <div class="mt-1"><i class="fa-solid fa-book-open text-primary"></i></div>
+                                <div>
+                                    <h6 class="text-white mb-1 small">Mini Brand Guideline</h6>
+                                    <p class="text-white-50 x-small mb-0">A quick-reference guide on how to use your
+                                        brand elements correctly.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div
+                        class="h-100 p-4 p-md-5 rounded-5 bg-secondary bg-opacity-5 border border-secondary border-opacity-20 position-relative shadow-gold-inset">
+                        <span
+                            class="badge bg-primary border border-primary text-dark position-absolute top-0 end-0 m-4 px-3 py-2">RECURRING
+                            SUPPORT</span>
+
+                        <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-4 small">Phase 02</h6>
+                        <h3 class="text-white fw-bold mb-4">Monthly Retainer</h3>
+                        <p class="text-white-50 x-small mb-5">Your dedicated creative engine, delivering high-volume
+                            assets every single month.</p>
+
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div
+                                    class="p-3 rounded-4 bg-dark border border-secondary border-opacity-20 d-flex align-items-center gap-4">
+                                    <div class="display-6 text-primary fw-bold">12+</div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small">Creative Quota</h6>
+                                        <p class="text-white-50 x-small mb-0">Choose between 12, 20, or 30 custom
+                                            designs per month.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div
+                                    class="p-3 rounded-4 bg-dark border border-secondary border-opacity-20 d-flex align-items-center gap-4">
+                                    <div class="fs-2 text-primary"><i class="fa-solid fa-bullhorn"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small">Full Campaign Sets</h6>
+                                        <p class="text-white-50 x-small mb-0">Promos + Stories + Ads designed as a
+                                            cohesive marketing push.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div
+                                    class="p-3 rounded-4 bg-dark border border-secondary border-opacity-20 d-flex align-items-center gap-4">
+                                    <div class="fs-2 text-primary"><i class="fa-solid fa-gauge-high"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small">Priority & Consistency</h6>
+                                        <p class="text-white-50 x-small mb-0">Fastest turnaround in our studio with a
+                                            style that never wavers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5 border-top border-secondary border-opacity-10">
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-3 small">Perfect Synergy</h6>
+                    <h2 class="text-white fw-bold display-6">Is This The <span class="text-primary italic-serif">Right
+                            Fit</span> For You?</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-white-50 small mb-0 ps-lg-4 border-start border-primary border-2">
+                        Our monthly support is designed for high-momentum brands that value <strong>speed, consistency,
+                            and professional execution</strong> over one-off designs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 h-100 hover-feature">
+                        <div class="mb-4 text-primary bg-dark d-inline-block p-3 rounded-3">
+                            <i class="fa-solid fa-rocket fs-3"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-3 small">Active SMEs</h5>
+                        <p class="text-white-50 x-small mb-0">Running monthly promos, seasonal sales, or product
+                            launches? We keep your marketing engine running at full speed without delays.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 h-100 hover-feature">
+                        <div class="mb-4 text-primary bg-dark d-inline-block p-3 rounded-3">
+                            <i class="fa-solid fa-people-group fs-3"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-3 small">In-House Experience</h5>
+                        <p class="text-white-50 x-small mb-0">For teams that want the feel of a dedicated "design
+                            department." We learn your brand's soul and become an extension of your team.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div
+                        class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 h-100 hover-feature">
+                        <div class="mb-4 text-primary bg-dark d-inline-block p-3 rounded-3">
+                            <i class="fa-solid fa-chart-line fs-3"></i>
+                        </div>
+                        <h5 class="text-white fw-bold mb-3 small">Ad Scalability</h5>
+                        <p class="text-white-50 x-small mb-0">Constantly testing ads? We provide the frequent creative
+                            updates needed to keep your Meta, TikTok, or Google Ads fresh and high-converting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 text-center p-4 rounded-4 border border-dashed border-secondary border-opacity-25">
+                <span class="text-white-50 x-small">
+                    <i class="fa-solid fa-shield-check text-primary me-2"></i>
+                    Focus on your business strategy while we handle the <span class="text-white">pixel-perfect
+                        execution</span>.
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5 border-top border-secondary border-opacity-10">
+
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="position-sticky" style="top: 100px;">
+                        <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-3 small">Seamless Integration
+                        </h6>
+                        <h2 class="text-white fw-bold mb-4">How We Sync <br>With <span
+                                class="text-primary italic-serif">Your Team</span></h2>
+                        <p class="text-white-50 small mb-4">
+                            To keep your monthly content consistent and high-performing, we rely on a clear flow of
+                            information. Here’s what fuels our creative engine:
+                        </p>
+                        <div
+                            class="p-3 rounded-4 bg-primary bg-opacity-5 border border-primary border-opacity-10 d-flex gap-3">
+                            <i class="fa-solid fa-calendar-check text-primary mt-1"></i>
+                            <p class="text-white-50 x-small mb-0">
+                                <strong>Note:</strong> We recommend a briefing session on the <span
+                                    class="text-white">25th of every month</span> to prepare for the month ahead.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-4">
+
+                        <div class="col-12">
+                            <div
+                                class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 hover-glow transition-all">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="bg-dark p-3 rounded-3 text-primary"><i
+                                            class="fa-solid fa-map-location-dot fs-4"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small fw-bold">Monthly Campaign Calendar</h6>
+                                        <p class="text-white-50 x-small mb-0">A roadmap of your upcoming promos. Don't
+                                            have one? <span class="text-white">We can help you structure it</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div
+                                class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 hover-glow transition-all">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="bg-dark p-3 rounded-3 text-primary"><i
+                                            class="fa-solid fa-tags fs-4"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small fw-bold">Offer & Deadline Specs</h6>
+                                        <p class="text-white-50 x-small mb-0">Specific promo details, pricing updates,
+                                            and hard deadlines for each campaign.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div
+                                class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 hover-glow transition-all">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="bg-dark p-3 rounded-3 text-primary"><i
+                                            class="fa-solid fa-images fs-4"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small fw-bold">Product Visuals</h6>
+                                        <p class="text-white-50 x-small mb-0">High-resolution product photos or
+                                            lifestyle images to be featured in the designs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div
+                                class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 hover-glow transition-all">
+                                <div class="d-flex align-items-center gap-4">
+                                    <div class="bg-dark p-3 rounded-3 text-primary"><i
+                                            class="fa-solid fa-compass fs-4"></i></div>
+                                    <div>
+                                        <h6 class="text-white mb-1 small fw-bold">Brand Direction Ref</h6>
+                                        <p class="text-white-50 x-small mb-0">Style references or moodboards to ensure
+                                            we align with your evolving vision.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-dark">
+        <div class="container py-5 border-top border-secondary border-opacity-10">
+            <div class="row g-4">
+
+                <div class="col-lg-7">
+                    <div
+                        class="p-5 rounded-5 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 h-100 position-relative overflow-hidden">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-5 pointer-events-none">
+                            <div class="pulse-line"></div>
+                        </div>
+
+                        <div class="position-relative">
+                            <h6 class="text-primary fw-bold text-uppercase tracking-widest mb-4 small">Delivery Rhythm
+                            </h6>
+                            <h3 class="text-white fw-bold mb-4">Rolling Schedule</h3>
+                            <p class="text-white-50 x-small mb-5 pe-lg-5">
+                                Our monthly plans operate on a predictable, high-speed loop. Instead of waiting weeks,
+                                you receive a <span class="text-white fw-bold">consistent stream of assets</span>
+                                throughout the month.
+                            </p>
+
+                            <div
+                                class="d-flex align-items-center gap-4 p-4 rounded-4 bg-dark border-start border-primary border-4">
+                                <div class="display-6 text-primary fw-bold">1–3</div>
+                                <div>
+                                    <h6 class="text-white mb-1 small fw-bold text-uppercase">Working Days Per Design
+                                    </h6>
+                                    <p class="text-white-50 x-small mb-0">From brief to first draft. Simple edits are
+                                        often faster.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div
+                        class="p-5 rounded-5 bg-secondary border border-secondary border-opacity-10 h-100 transition-hover">
+                        <h6 class="text-white-50 fw-bold text-uppercase tracking-widest mb-4 small">Service Boundaries
+                        </h6>
+                        <h4 class="text-white fw-bold mb-4">What’s <span class="text-primary italic-serif">Not</span>
+                            Included</h4>
+
+                        <div class="space-y-4">
+                            <div class="d-flex gap-3 mb-4">
+                                <div class="text-primary opacity-50 mt-1"><i class="fa-solid fa-calendar-xmark"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white mb-1 small">Unlimited Daily Urgents</h6>
+                                    <p class="text-white-50 x-small mb-0 italic">To maintain <strong>pixel-perfect
+                                            quality</strong>, we do not accept "immediate same-day" requests daily.
+                                        Planning is key.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3">
+                                <div class="text-primary opacity-50 mt-1"><i class="fa-solid fa-video-slash"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white mb-1 small">Heavy Video Editing</h6>
+                                    <p class="text-white-50 x-small mb-0 italic">Complex video production/motion
+                                        graphics are a <strong>separate premium service</strong> and not part of the
+                                        standard monthly graphic quota.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="https://wa.me/60123011610"
+                                class="btn btn-outline-primary w-100 py-3 fw-bold rounded-pill text-uppercase tracking-wider">
+                                Book A Discovery Call <i class="fa-solid fa-phone-volume ms-2 small"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="site-footer"></div>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../lib/wow/wow.min.js"></script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/waypoints/waypoints.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
