@@ -604,7 +604,7 @@
                             <div class="icon-pill mb-3">
                                 ⚖️
                             </div>
-                            <h5 class="fw-bold mb-2">Company Secretary (CoSec)</h5>
+                            <h5 class="fw-bold mb-2">Secretary</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-cosec"></ul>
                         </div>
                     </div>
@@ -616,7 +616,7 @@
                             <div class="icon-pill mb-3">
                                 📊
                             </div>
-                            <h5 class="fw-bold mb-2">Cloud Accounting System</h5>
+                            <h5 class="fw-bold mb-2">Accounting</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-acc"></ul>
                         </div>
                     </div>
@@ -628,7 +628,7 @@
                             <div class="icon-pill mb-3">
                                 👥
                             </div>
-                            <h5 class="fw-bold mb-2">HR Compliance Documents</h5>
+                            <h5 class="fw-bold mb-2">HR Compliance</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-hr"></ul>
                         </div>
                     </div>
@@ -640,8 +640,20 @@
                             <div class="icon-pill mb-3">
                                 💻
                             </div>
-                            <h5 class="fw-bold mb-2">Website Development</h5>
+                            <h5 class="fw-bold mb-2">Tech/Web</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-web"></ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEO -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="icon-pill mb-3">
+                                🗃️
+                            </div>
+                            <h5 class="fw-bold mb-2">Payments</h5>
+                            <ul class="small text-muted mb-0 list-unstyled" id="list-pay"></ul>
                         </div>
                     </div>
                 </div>
@@ -652,7 +664,7 @@
                             <div class="icon-pill mb-3">
                                 🚀
                             </div>
-                            <h5 class="fw-bold mb-2">SEO & Digital Marketing</h5>
+                            <h5 class="fw-bold mb-2">Growth</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-seo"></ul>
                         </div>
                     </div>
@@ -664,7 +676,7 @@
                             <div class="icon-pill mb-3">
                                 📞
                             </div>
-                            <h5 class="fw-bold mb-2">Dedicated Consultant Support</h5>
+                            <h5 class="fw-bold mb-2">Support</h5>
                             <ul class="small text-muted mb-0 list-unstyled" id="list-support"></ul>
                         </div>
                     </div>
@@ -1206,6 +1218,11 @@
                         "Mobile Ready"
                     ],
 
+                    pay: [
+                        "FPX, & Credit Card Advice",
+                        "Checkout Guides"
+                    ],
+
                     seo: [
                         "Search Indexing",
                         "Meta Optimization"
@@ -1242,6 +1259,11 @@
                         "Corporate Site (5–8 pg)",
                         "Blog CMS"
                     ],
+                    pay: [
+                        "FPX, CC & BNPL Setup",
+                        "Billing API"
+                    ],
+
                     seo: [
                         "Advanced SEO",
                         "Google Map (GMB)"
@@ -1278,6 +1300,10 @@
                         "E-com Store",
                         "CRM Integration"
                     ],
+                    pay: [
+                        "Full Suite: FPX, CC, BNPL",
+                        "Fraud Protection"
+                    ],
                     seo: [
                         "Search Dominance",
                         "Competitor Audit"
@@ -1311,6 +1337,10 @@
                     web: [
                         "Complex Web Apps",
                         "Cyber Audit"
+                    ],
+                    pay: [
+                        "Custom Pay Flows",
+                        "Global Settlement"
                     ],
                     seo: [
                         "Growth Engine",
@@ -1414,6 +1444,7 @@
             updateList('acc', data.lists.acc);
             updateList('hr', data.lists.hr);
             updateList('web', data.lists.web);
+            updateList('pay', data.lists.pay);
             updateList('seo', data.lists.seo);
             updateList('support', data.lists.support);
         }
