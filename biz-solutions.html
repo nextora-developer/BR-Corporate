@@ -351,7 +351,6 @@
             border: 1px solid rgba(212, 175, 55, 0.35);
             padding: 24px 32px;
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
-            overflow: hidden;
         }
 
         /* Table 本体 */
@@ -399,6 +398,18 @@
         .comparison-table .fw-strong {
             font-weight: 700;
         }
+
+        @media (max-width: 768px) {
+            .comparison-card {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-table {
+                min-width: 720px;
+            }
+        }
+
 
 
         /* 让 ★ 悬挂缩进，换行对齐在文字后面 */
