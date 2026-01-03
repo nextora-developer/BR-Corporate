@@ -343,6 +343,71 @@
             padding: 1.2rem 1.4rem 1.4rem;
             border-top: 1px solid rgba(212, 175, 55, 0.15);
         }
+
+        /* Comparison Card 外框 */
+        .comparison-card {
+            background: #050505;
+            border-radius: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 24px 32px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+        }
+
+        /* Table 本体 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #f5f5f5;
+            font-size: 0.9rem;
+        }
+
+        /* 表头（底线 = 金色） */
+        .comparison-table thead th {
+            padding: 14px 18px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: #050505;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+        }
+
+        /* 单元格 */
+        .comparison-table tbody td {
+            padding: 16px 18px;
+            border: none;
+        }
+
+        /* 行与行之间的横线（金色细线） */
+        .comparison-table tbody tr+tr {
+            border-top: 1px solid rgba(212, 175, 55, 0.22);
+        }
+
+        /* 第一栏左对齐，其他栏居中 + 金色竖线 */
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .comparison-table th:not(:first-child),
+        .comparison-table td:not(:first-child) {
+            text-align: center;
+            border-left: 1px solid rgba(212, 175, 55, 0.18);
+        }
+
+        /* 强调文字（Custom / Corporate / Priority 等） */
+        .comparison-table .fw-strong {
+            font-weight: 700;
+        }
+
+
+        /* 让 ★ 悬挂缩进，换行对齐在文字后面 */
+        .feature-list li {
+            padding-left: 1.4em;
+            /* 整体往右一点 */
+            text-indent: -1.4em;
+            /* 第一行往左拉，让 ★ 掛在外面 */
+        }
     </style>
 </head>
 
@@ -408,9 +473,9 @@
 
             <!-- Title -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold mb-2">Your Path to Business Excellence</h2>
+                <h2 class="fw-bold mb-2">How It Works</h2>
                 <p class="text-muted mb-0">
-                    A clear, four-step journey to a fully operational and compliant enterprise.
+                    A simple workflow—your speed depends mainly on document readiness and third-party processing.
                 </p>
             </div>
 
@@ -420,36 +485,36 @@
                 <!-- Step 1 -->
                 <div class="col-md-3">
                     <div class="journey-step active mb-3">1</div>
-                    <h6 class="fw-bold">Legal Setup</h6>
+                    <h6 class="fw-bold">Select Package</h6>
                     <p class="text-muted small mb-0 step-desc">
-                        SSM name search & official incorporation.
+                        Choose based on current needs.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="col-md-3">
                     <div class="journey-step mb-3">2</div>
-                    <h6 class="fw-bold">Compliance</h6>
+                    <h6 class="fw-bold">Submit Details</h6>
                     <p class="text-muted small mb-0 step-desc">
-                        Corporate bank opening & CoSec appointment.
+                        We request KYC & required documents.
                     </p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="col-md-3">
                     <div class="journey-step active mb-3">3</div>
-                    <h6 class="fw-bold">Digital Finance</h6>
+                    <h6 class="fw-bold">Processing</h6>
                     <p class="text-muted small mb-0 step-desc">
-                        SQL / Bukku implementation & e-Invoicing.
+                        Submission & coordination (SSM/banks/platforms).
                     </p>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="col-md-3">
                     <div class="journey-step mb-3">4</div>
-                    <h6 class="fw-bold">Growth Launch</h6>
+                    <h6 class="fw-bold">Delivery</h6>
                     <p class="text-muted small mb-0 step-desc">
-                        Web presence & SEO visibility dominance.
+                        Receive deliverables & next-step checklist.
                     </p>
                 </div>
 
@@ -780,8 +845,7 @@
                     background: rgba(255,255,255,0.05);
                     border-color: rgba(212,175,55,0.22) !important;
                     box-shadow: 0 0 0 1px rgba(212,175,55,0.10) inset;
-                    backdrop-filter: blur(10px);
-                ">
+                    backdrop-filter: blur(10px);">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <h3 class="text-white mb-0">Starter</h3>
                             <!-- <span class="badge rounded-pill" style="
@@ -814,21 +878,15 @@
                                 style="letter-spacing: .12em; color: rgba(212,175,55,0.75);">
                                 Included
                             </div>
-                            <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.65);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months Company Secretary</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> SSM Incorporation Fees &
-                                    Statutory Records</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Basic Cloud Accounting Setup &
-                                    Training</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Employment Documents Pack (Offer
-                                    Letter + Employment Contract)</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 1-page Landing Website (Mobile
-                                    Responsive)</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Basic On-page SEO Setup</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Email Support + Quarterly Tax
-                                    Reminders</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Bank Account Opening Assistance
+                            <ul class="list-unstyled mb-0 feature-list" style="color: rgba(255,255,255,0.65);">
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> SSM incorporation-related fees
+                                    (as scoped)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Company secretary (Year 1)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Digital minute book (standard)
                                 </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Bank account opening guidance
+                                </li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Landing page (1 page)</li>
                             </ul>
                         </div>
                     </div>
@@ -876,30 +934,18 @@
                                 style="letter-spacing: .12em; color: rgba(212,175,55,0.75);">
                                 Included
                             </div>
-                            <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.65);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months Licensed Company
-                                    Secretary
-                                </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Cloud Accounting System Setup +
-                                    e-Invoicing Module
-
-                                </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Employee Handbook + Employment &
-                                    Policy Document Pack
-
-                                </li>
+                            <ul class="list-unstyled mb-0 feature-list" style="color: rgba(255,255,255,0.65);">
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Everything in Starter</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Cloud accounting setup (as
+                                    scoped)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> E-Invoicing readiness guidance
+                                    (LHDN)</li>
                                 <li class="mb-2"><span style="color:#D4AF37;">★</span> Corporate Website (5–8 Pages)
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Google Business Profile Setup +
-                                    Monthly SEO Reporting
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> HR setup + employment templates
+                                    (as scoped)
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Dedicated WhatsApp Support Group
-                                </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Priority Compliance & Finance
-                                    Advisory
-                                </li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Annual Compliance & Audit
-                                    Readiness Check
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Corporate website (up to 5 pages)
                                 </li>
                             </ul>
                         </div>
@@ -946,30 +992,20 @@
                                 style="letter-spacing: .12em; color: rgba(212,175,55,0.75);">
                                 Included
                             </div>
-                            <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.65);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 12 months Company Secretary +
-                                    Annual Return (AR)
+                            <ul class="list-unstyled mb-0 feature-list" style="color: rgba(255,255,255,0.65);">
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Everything in Growth
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> LHDN-Compliant e-Invoicing
-                                    Implementation with Auto Reconciliation
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Automation & reconciliation
+                                    workflows (as scoped)
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom HR Policy, SOP & KPI
-                                    Framework
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Annual return support (as scoped)
 
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Full E-commerce Website + Payment
-                                    Gateways</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Logistics & inventory integration
-                                    (API-ready)
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom SOPs & KPI documentation
+                                    (as scoped)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> E-commerce website build (as
+                                    scoped)
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Full SEO Strategy & Competitor
-                                    Analysis
-                                </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> 1-to-1 Expert Advisory & Partner
-                                    Introductions
-                                </li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Priority Compliance Handling &
-                                    Escalation Support</li>
                             </ul>
                         </div>
                     </div>
@@ -1004,7 +1040,7 @@
                                 <div class="mb-2" style="color: rgba(255,255,255,0.55);">quotation</div>
                             </div>
                             <div class="d-flex align-items-end gap-2">
-                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">Custom</div>
+                                <div class="display-6 fw-bold mb-0" style="color:#D4AF37;">Let’s Talk</div>
                             </div>
                             <div class="small" style="color: rgba(255,255,255,0.45);">
                                 Based on scope, system complexity & compliance needs
@@ -1018,25 +1054,16 @@
                                 INCLUDED (Framework-Based, Not Fixed)
 
                             </div>
-                            <ul class="list-unstyled mb-0" style="color: rgba(255,255,255,0.70);">
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Tailored Company Structure &
-                                    Compliance Strategy
+                            <ul class="list-unstyled mb-0 feature-list" style="color: rgba(255,255,255,0.70);">
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Holding / group structure review
+
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom Accounting, Tax &
-                                    E-Invoicing Setup
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom integrations / API scope
+
                                 </li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Bespoke HR Policies, SOPs & KPI
-                                    Framework</li>
-                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Custom Website, System or
-                                    E-Commerce Build</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Payment Gateway, API & System
-                                    Integrations</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Advanced SEO, Automation &
-                                    Digital Growth Strategy</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> 1-to-1 Expert Advisory & Project
-                                    Management</li>
-                                <li class="mb-0"><span style="color:#D4AF37;">★</span> Priority Support & Escalation
-                                    Handling</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Compliance gap assessment
+                                    (process-focused)</li>
+                                <li class="mb-2"><span style="color:#D4AF37;">★</span> Dedicated delivery roadmap</li>
 
                             </ul>
                         </div>
@@ -1050,99 +1077,338 @@
         </div>
     </div>
 
+    <section class="py-5 bg-dark">
+        <div class="container">
+
+            <!-- Title -->
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">Detailed Comparison</h3>
+                <p class="text-muted mt-2">
+                    A practical overview. Final scope is confirmed in writing (quotation / SOW).
+                </p>
+            </div>
+
+            <!-- Comparison Card + Table -->
+            <div class="comparison-card">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Starter</th>
+                            <th>Growth</th>
+                            <th>Ultimate</th>
+                            <th>Custom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>SSM registration support</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td>•</td>
+                        </tr>
+
+                        <tr>
+                            <td>Company secretary (Year 1)</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td>•</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cloud accounting setup</td>
+                            <td>Basic</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td class="fw-strong">Custom</td>
+                        </tr>
+
+                        <tr>
+                            <td>E-invoicing readiness guidance</td>
+                            <td>—</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td>•</td>
+                        </tr>
+
+                        <tr>
+                            <td>HR / employment templates</td>
+                            <td>—</td>
+                            <td>•</td>
+                            <td>•</td>
+                            <td class="fw-strong">Custom</td>
+                        </tr>
+
+                        <tr>
+                            <td>Website</td>
+                            <td>Landing</td>
+                            <td class="fw-strong">Corporate</td>
+                            <td class="fw-strong">E-Commerce</td>
+                            <td class="fw-strong">Custom</td>
+                        </tr>
+
+                        <tr>
+                            <td>Support channel</td>
+                            <td>Email</td>
+                            <td class="fw-strong">WhatsApp</td>
+                            <td class="fw-strong">Dedicated</td>
+                            <td class="fw-strong">Priority</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+
+
     <!-- Section: Expert Insights (FAQ) -->
     <section class="py-5 bg-dark">
-        <div class="container" style="max-width: 920px;">
+        <div class="container">
 
             <!-- Title -->
             <div class="text-center mb-5">
                 <h3 class="fw-bold mb-2">Expert Insights (FAQ)</h3>
             </div>
 
-            <div class="accordion faq-accordion" id="faqAccordion">
+            <div class="row g-4">
 
-                <!-- Q1 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            Is e-Invoicing (LHDN) mandatory now?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            LHDN is implementing e-Invoicing in phases. Our SQL/Bukku setups are
-                            100% compliant with the latest LHDN MyInvois requirements.
+                <!-- LEFT (Q1–Q6) -->
+                <div class="col-md-6">
+                    <div class="accordion faq-accordion" id="faqLeft">
+
+                        <!-- Q1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    Is e-Invoicing (LHDN) mandatory now?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    LHDN is implementing e-Invoicing in phases. Our SQL/Bukku setups are
+                                    100% compliant with the latest LHDN MyInvois requirements.
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Q2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    Can a foreigner own 100% of a Sdn Bhd?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    In most industries, yes. Foreigners can hold 100% equity,
+                                    but at least one director must be a resident of Malaysia.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    What is the difference between SQL and Bukku?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    SQL is robust for inventory-heavy businesses, while Bukku is
+                                    cloud-native and SME-friendly. We help you choose the best fit.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    When do I need to register for SST?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    You must register for SST once your taxable turnover exceeds
+                                    RM500,000 within a 12-month period. We monitor this for you.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    Why only 12 months for CoSec?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    CoSec appointments are renewed annually. Our 12-month term ensures
+                                    you receive updated compliance advice every year.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+                                    Are prices one-time or annual?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                                <div class="accordion-body">
+                                    Package pricing typically includes (i) one-time setup work and (ii) Year-1 items
+                                    that are
+                                    explicitly listed (e.g., secretarial). From Year-2 onward, renewals apply for
+                                    ongoing items
+                                    (e.g., secretary/software/hosting) at then-current rates unless stated otherwise in
+                                    writing.<br><br>
+                                    Legal clarity: Only the written quotation/SOW defines what’s included.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Q2 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq2">
-                            Can a foreigner own 100% of a Sdn Bhd?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            In most industries, yes. Foreigners can hold 100% equity,
-                            but at least one director must be a resident of Malaysia.
-                        </div>
-                    </div>
-                </div>
+                <!-- RIGHT (Q7–Q12) -->
+                <div class="col-md-6">
+                    <div class="accordion faq-accordion" id="faqRight">
 
-                <!-- Q3 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq3">
-                            What is the difference between SQL and Bukku?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            SQL is robust for inventory-heavy businesses, while Bukku is
-                            cloud-native and SME-friendly. We help you choose the best fit.
+                        <!-- Q7 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq7">
+                                    How fast is the process?
+                                </button>
+                            </h2>
+                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    We can begin work once required details are complete and verified. Submission speed
+                                    may be
+                                    fast, but approvals and appointments depend on third parties (e.g., SSM, banks). Any
+                                    timeline shown is an estimate, not a guarantee.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Q4 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq4">
-                            When do I need to register for SST?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You must register for SST once your taxable turnover exceeds
-                            RM500,000 within a 12-month period. We monitor this for you.
+                        <!-- Q8 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq8">
+                                    How fast is the process?
+                                </button>
+                            </h2>
+                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    We can begin work once required details are complete and verified. Submission speed
+                                    may be
+                                    fast, but approvals and appointments depend on third parties (e.g., SSM, banks). Any
+                                    timeline shown is an estimate, not a guarantee.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Q5 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq5">
-                            Why only 12 months for CoSec?
-                        </button>
-                    </h2>
-                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            CoSec appointments are renewed annually. Our 12-month term ensures
-                            you receive updated compliance advice every year.
+                        <!-- Q9 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq9">
+                                    What is included vs excluded?
+                                </button>
+                            </h2>
+                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Only what is explicitly listed in the written quotation/SOW is included. Anything
+                                    not listed
+                                    is excluded by default (e.g., special licenses, nominee director, extra design
+                                    pages,
+                                    complex integrations, out-of-scope revisions).
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Q10 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq10">
+                                    What is your refund / cancellation policy?
+                                </button>
+                            </h2>
+                            <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    Administrative and professional services typically involve time-based work and
+                                    third-party
+                                    charges. Once work has started or submissions/third-party fees are incurred, refunds
+                                    may be
+                                    limited. Exact terms are stated in your invoice/quotation and service terms.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q11 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq11">
+                                    Do you guarantee approval (SSM/bank/platform)?
+                                </button>
+                            </h2>
+                            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    No. Approvals are decided by the relevant authorities/third parties. We provide
+                                    preparation,
+                                    submission support, and corrective actions where possible, but we cannot guarantee
+                                    outcomes.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q12 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq12">
+                                    Do you provide legal or tax advice?
+                                </button>
+                            </h2>
+                            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                                <div class="accordion-body">
+                                    We provide operational guidance and documentation support. Where professional advice
+                                    is
+                                    required, it may be handled by or referred to the appropriate licensed
+                                    professionals. Always
+                                    rely on written advice and official guidance for high-stakes decisions.
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
+
 
 
 
